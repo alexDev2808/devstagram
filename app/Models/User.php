@@ -17,8 +17,9 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
+    protected $fillable = [  // valores a insertar en la BD
         'name',
+        'username',
         'email',
         'password',
     ];
