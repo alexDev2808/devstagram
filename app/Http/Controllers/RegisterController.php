@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
+
 class RegisterController extends Controller
 {
     //
@@ -22,7 +23,9 @@ class RegisterController extends Controller
     {
 
         // Modificar el request
+
         $request->request->add(['username' => Str::slug( $request->username )]);
+
 
         // Validacion
         $this->validate($request, [
